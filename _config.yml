@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 易大大blog
+title: 易大大
 subtitle: '生活日记'
 description: '洞庭湖的老麻雀'
 keywords: 易大大，岳阳易大大，洞庭湖边易大大
@@ -45,7 +45,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true

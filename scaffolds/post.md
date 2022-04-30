@@ -2,7 +2,9 @@
 title: {{ title }}
 date: {{ date }}
 tags:
+  - 教程
 categories:
-keywords:
-description:
+  - 教程
+keywords: "教程，学习"
+description: 
 ---
