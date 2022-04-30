@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: 易大大blog
+subtitle: '生活日记'
+description: '洞庭湖的老麻雀'
+keywords: 易大大，岳阳易大大，洞庭湖边易大大
+author: 易大大
+language: zh-CN
 timezone: ''
 
 # URL
