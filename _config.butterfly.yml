@@ -11,6 +11,7 @@ menu:
      音乐: /music/ || fas fa-music
      照片: /Gallery/ || fas fa-images
      电影: /movies/ || fas fa-video
+     书籍: /book/ || fas fa-book
   # 友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
@@ -78,8 +79,8 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.png
-  effect: false
+  img: /img/abing.png
+  effect: true
 
 # Disable all banner image
 disable_top_img: false
