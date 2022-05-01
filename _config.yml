@@ -108,3 +108,6 @@ deploy:
     #@gitee: git@gitee.com:yixiaobing/yixiaobing.git
     repo: git@115.28.138.136:/home/repo/hexo.git
   branch: master
+aplayer:
+  meting: false
+  asset_inject: false
