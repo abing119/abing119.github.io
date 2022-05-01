@@ -192,10 +192,10 @@ reward:
   QR_code:
     # - img: /img/wechat.jpg
     #   link:
-    #   text: wechat
+    #   text: 微信
     # - img: /img/alipay.jpg
     #   link:
-    #   text: alipay
+    #   text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
