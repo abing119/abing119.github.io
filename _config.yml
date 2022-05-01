@@ -109,5 +109,5 @@ deploy:
     repo: git@115.28.138.136:/home/repo/hexo.git
   branch: master
 aplayer:
-  meting: false
+  meting: true
   asset_inject: false
