@@ -8,7 +8,7 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   清单||fas fa-list:
-     音乐: /music/ || fas fa-music
+     #音乐: /music/ || fas fa-music
      照片: /gallery/ || fas fa-images
      电影: /movies/ || fas fa-video
      书籍: /book/ || fas fa-book
@@ -207,7 +207,7 @@ post_edit:
 
 # Related Articles
 related_post:
-  enable: true
+  enable: false
   limit: 6 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
@@ -761,7 +761,7 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
@@ -824,7 +824,10 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-     - <div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="true" mutex="true"> </div>
+     - <link rel="stylesheet" href="/dist/APlayer.min.css">
+       <div id="aplayer" class="no-destroy"></div>
+       <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+       <script type="text/javascript" src="/dist/music.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -836,7 +839,7 @@ CDN:
   utils:
 
   # pjax
-  pjax:
+  pjax: true
 
   # comments
   gitalk:
