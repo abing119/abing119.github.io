@@ -9,7 +9,7 @@ menu:
   分类: /categories/ || fas fa-folder-open
   清单||fas fa-list:
      音乐: /music/ || fas fa-music
-     照片: /Gallery/ || fas fa-images
+     照片: /gallery/ || fas fa-images
      电影: /movies/ || fas fa-video
      书籍: /book/ || fas fa-book
   # 友链: /link/ || fas fa-link
@@ -37,8 +37,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-qq: <a href="http://wpa.qq.com/msgrd?v=3&uin=5900332&site=qq&menu=yes"> || QQ
-  # fas fa-envelope: mailto:5900332@qq.com || Email
+   fab fa-qq: <a href="http://wpa.qq.com/msgrd?v=3&uin=5900332&site=qq&menu=yes"> || QQ
+   fas fa-envelope: mailto:5900332@qq.com || Email
 
 # search (搜索)
 # --------------------------------------
