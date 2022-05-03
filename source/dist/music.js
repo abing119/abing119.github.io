@@ -5,7 +5,7 @@ const ap = new APlayer({
 		{
         name: '夜曲',
         artist: '周杰伦',
-        url: '/music/夜曲.wav',
+        url: '/music/夜曲.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
 	{
