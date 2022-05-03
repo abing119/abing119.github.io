@@ -11,7 +11,7 @@ menu:
      #音乐: /music/ || fas fa-music
      照片: /gallery/ || fas fa-images
      电影: /movies/ || fas fa-video
-     书籍: /book/ || fas fa-book
+     书籍: /books/ || fas fa-book
   # 友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
