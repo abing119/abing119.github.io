@@ -5,8 +5,8 @@ const ap = new APlayer({
 		{
         name: '夜曲',
         artist: '周杰伦',
-        url: 'https://ws.stream.qqmusic.qq.com/C4000024jrso28p8VA.m4a?guid=9298521&vkey=807F13A8E7F7B220C3A5E758B25C3DB666ABDFD10B7AD8BE64A9EF19EDEC74FD4219028CBAC2D98B5E0A6C048861CBC9CCFA26774BFAD7A7&uin=626567678&fromtag=103002',
-        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000024bjiL2aocxT.jpg',
+        url: '/music/夜曲.wav',
+        cover: '/music/十一月的肖邦.jpg',
     },
 	{
 	        name: "人世间",
