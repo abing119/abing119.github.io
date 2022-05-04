@@ -98,6 +98,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
+#theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -111,35 +112,3 @@ deploy:
 aplayer:
   meting: true
   asset_inject: false
-  
-douban:
-  user: 216913945
-  builtin: true
-  book:
-    title: '浩如烟海'
-    quote: '简牍盈积 浩如烟海 抉摘幽隐 枝计毫厘'
-    meta: true
-    comments: false
-    #top_img: https://cccccc.png
-    aside: true
-    path: books
-    limit:
-  movie:
-    title: '百看不厌'
-    quote: '人生观，价值观，世界观'
-    meta: true
-    comments: false
-    #top_img: https://cccccc.png
-    aside: true
-    path: movies
-    limit:
-  #game:
-   # title: 'This is my game title'
-    #quote: 'This is my game quote'
-    #meta: true
-    #comments: true
-   # top_img: https://cccccc.png
-   # aside: true
-   # path: games
-   # limit:
-  timeout: 10000 

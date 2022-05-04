@@ -7,13 +7,13 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  清单||fas fa-list:
+  #清单||fas fa-list:
      #音乐: /music/ || fas fa-music
-     照片: /gallery/ || fas fa-images
-     电影: /movies/ || fas fa-video
-     书籍: /books/ || fas fa-book
+     #照片: /gallery/ || fas fa-images
+     #电影: /movies/ || fas fa-video
+     #书籍: /books/ || fas fa-book
   # 友链: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
+  我: /about/ || fas fa-heart
 
 # Code Blocks (代码相关)
 # --------------------------------------
@@ -188,7 +188,7 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: true
+  enable: false
   QR_code:
     - img: /img/wechat.jpg
     #  link:
