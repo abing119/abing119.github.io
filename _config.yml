@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 易大大
+title: 面朝大海，春暖花开
 subtitle: '生活日记'
 description: '洞庭湖的老麻雀'
 keywords: 易大大，岳阳易大大，洞庭湖边易大大
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://yi.mjiao.net
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -98,7 +98,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
-#theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -112,3 +111,4 @@ deploy:
 aplayer:
   meting: true
   asset_inject: false
+  
