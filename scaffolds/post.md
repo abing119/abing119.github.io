@@ -2,9 +2,9 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-  - 教程
+  - 标签
 categories:
-  - 教程
-keywords: "教程，学习"
-description: 文章页节选
+  - 分类
+keywords: "关键词"
+description: 描述
 ---
