@@ -10,7 +10,7 @@ const ap = new APlayer({
     mutex: true,
     listFolded: true,
     listMaxHeight: 90,
-    lrcType: 3,
+    
     audio: [
 		{
         name: '夜曲',
