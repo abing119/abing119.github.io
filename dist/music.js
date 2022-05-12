@@ -5,12 +5,9 @@ const ap = new APlayer({
     theme: '#FADFA3',
     loop: 'all',
     order: 'random',
-    preload: 'auto',
-    volume: 0.7,
+    volume: 0.8,
     mutex: true,
     listFolded: true,
-    listMaxHeight: 90,
-    
     audio: [
 		{
         name: '夜曲',
