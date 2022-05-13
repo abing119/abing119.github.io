@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yi.mjiao.net">
-  <title>Hello World | 面朝大海，春暖花开</title>
+  <title>hexo添加aplayer组件 | 面朝大海，春暖花开</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="aplayer是一个非常漂亮好用的HTML5音乐播放器，和dplayer师出同门。 记录一下添加音乐插件的过程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yi.mjiao.net/2022/05/09/hello-world/index.html">
+<meta property="og:title" content="hexo添加aplayer组件">
+<meta property="og:url" content="http://yi.mjiao.net/2022/05/13/hexo%E6%B7%BB%E5%8A%A0aplayer%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="面朝大海，春暖花开">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="aplayer是一个非常漂亮好用的HTML5音乐播放器，和dplayer师出同门。 记录一下添加音乐插件的过程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-09T11:59:34.593Z">
-<meta property="article:modified_time" content="2022-05-13T08:22:44.122Z">
+<meta property="article:published_time" content="2022-05-13T10:51:18.000Z">
+<meta property="article:modified_time" content="2022-05-13T11:26:22.422Z">
 <meta property="article:author" content="易大大">
-<meta property="article:tag" content="易大大，岳阳易大大，洞庭湖边易大大">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="面朝大海，春暖花开" type="application/atom+xml">
@@ -194,42 +194,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo添加aplayer组件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      hexo添加aplayer组件
     </h1>
   
 
         
         
-        <a href="/2022/05/09/hello-world/" class="archive-article-date">
-  	<time datetime="2022-05-09T11:59:34.593Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-09</time>
+        <a href="/2022/05/13/hexo%E6%B7%BB%E5%8A%A0aplayer%E7%BB%84%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2022-05-13T10:51:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <p>aplayer是一个非常漂亮好用的HTML5音乐播放器，和dplayer师出同门。</p>
+<p>记录一下添加音乐插件的过程。</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装aplayer"><a href="#安装aplayer" class="headerlink" title="安装aplayer"></a>安装aplayer</h3><h4 id="npm安装"><a href="#npm安装" class="headerlink" title="npm安装"></a>npm安装</h4><p>在hexo博客的文件夹根目录打开git bash,并输入：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">--save</span> <span class="string">hexo-tag-aplayer</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>可以看到在node_module文件夹中多出来一个aplayer文件夹即可,为了方便将这个dist文件夹复制一份到主题目录下的source文件夹中。</p>
+<h3 id="配置js组件"><a href="#配置js组件" class="headerlink" title="配置js组件"></a>配置js组件</h3><p>这一步可以根据教程选择自己喜欢的模式。新建一个music.js（名字随便起），放到主题的source文件夹里（我放在source&#x2F;js&#x2F;diy&#x2F;music.js）</p>
+<h5 id="跟随模式"><a href="#跟随模式" class="headerlink" title="跟随模式"></a>跟随模式</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span><br><span class="line">    <span class="attr">fixed</span>: <span class="literal">true</span>,</span><br><span class="line">	<span class="attr">autoplay</span>: <span class="literal">true</span>, <span class="comment">//自动播放</span></span><br><span class="line">    <span class="attr">audio</span>: [</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    &#125;, </span><br><span class="line">	]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h5 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span><br><span class="line">    <span class="attr">audio</span>: [&#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="布置到想要的页面中"><a href="#布置到想要的页面中" class="headerlink" title="布置到想要的页面中"></a>布置到想要的页面中</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/dist/APlayer.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/dist/APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/diy/music.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>注意的是，这里的<code>id=“aplayer”</code>要和上面music.js中的<code>container: document.getElementById(‘aplayer’)</code>填的Id相同。</p>
 
       
 
@@ -238,7 +239,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -251,15 +274,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/05/13/markdown%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          markdown语法
-        
-      </div>
-    </a>
   
+    <a href="/2022/05/13/Hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客加密</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -284,7 +303,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85aplayer"><span class="toc-number">1.</span> <span class="toc-text">安装aplayer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#npm%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">npm安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEjs%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">配置js组件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%9F%E9%9A%8F%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.0.1.</span> <span class="toc-text">跟随模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.0.2.</span> <span class="toc-text">普通模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E7%BD%AE%E5%88%B0%E6%83%B3%E8%A6%81%E7%9A%84%E9%A1%B5%E9%9D%A2%E4%B8%AD"><span class="toc-number">3.</span> <span class="toc-text">布置到想要的页面中</span></a></li></ol>
                     </div>
                 </span>
             </div>
