@@ -109,7 +109,7 @@
 		</nav>
 		<nav>
 			<span class="header-total-papaer">
-			总文章数 3
+			总文章数 5
 			</span>
 		</nav>
 		<nav class="header-smart-menu">
@@ -194,6 +194,327 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hexo博客加密" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/13/Hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/">Hexo博客加密</a>
+    </h1>
+  
+
+        
+        
+        <a href="/2022/05/13/Hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/" class="archive-article-date">
+  	<time datetime="2022-05-13T08:54:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>hexo的个人博客进行加密，任意主题都适用</p>
+</blockquote>
+<p>采用第三方插件<a target="_blank" rel="noopener" href="https://github.com/edolphin-ydf/hexo-encrypt">hexo-encrypt</a></p>
+<p>安装</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-encrypt</span> <span class="string">--save</span></span><br></pre></td></tr></table></figure>
+
+<p>在hexo的配置文件<code>_config.yml</code>下进行配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">encrypt: </span><br><span class="line">  password: 123456</span><br></pre></td></tr></table></figure>
+
+<p>这里的password为默认密码，如果在文章头没有申明独立密码，则可以用默认密码解锁文章。</p>
+<p>使用：将 “encrypt” 字段添加到您文章信息头就像这样，”enc_pwd”申明独立密码。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2016-03-30 21:18:02</span><br><span class="line">encrypt: true</span><br><span class="line"><span class="section">enc<span class="emphasis">_pwd: 123456</span></span></span><br><span class="line"><span class="emphasis"><span class="section">---</span></span></span><br></pre></td></tr></table></figure>
+
+<p>最后<code>hexo cl</code>再<code>hexo g</code>和<code>hexo d</code>。</p>
+<p>自定义密码错误提示：</p>
+<p>找到\blog\node_modules\hexo-encrypt\lib\conf_post.js，找到这一段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;enc_error&quot;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;password error!&quot;</span>\n<span class="string">&#x27; +</span></span><br></pre></td></tr></table></figure>
+
+<p>替换password error!即可。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/13/Hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Hexo部署到腾讯云轻量应用服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/13/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/">Hexo部署到腾讯云轻量应用服务器（宝塔面板）</a>
+    </h1>
+  
+
+        
+        
+        <a href="/2022/05/13/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2022-05-13T08:20:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="修改初始密码"><a href="#修改初始密码" class="headerlink" title="修改初始密码"></a>修改初始密码</h3><p>进入腾讯云，点击右上角<code>控制台</code>，选择<code>轻量应用服务器</code>（如果没有的话，就直接使用上面的搜索功能）<br>找到自己的服务器，点击 更多→管理，然后选择重置密码，重置初始密码</p>
+<h3 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h3><p>点击 更多→管理→防火墙→添加规则，开放8888端口<br>为之后添加宝塔面板做准备</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>配置SSH密钥，实现免密登录（首次提交时仍需要验证密码），如之前配过可跳过此步。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>连续敲回车确定，然后看到提示秘钥以保存在xxx路径下（如果没有出现提示就多敲几次回车）。<br>在提示的路径下找到<code>id_rsa</code>文件，复制文件内容，下面配置Git时会用到</p>
+<h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><blockquote>
+<p>如果没有特别说明，安装过程中如有出现选择，一律选择yes（y），（即输入yes（y）然后点击回车）</p>
+</blockquote>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>点击登录（见图一）</p>
+<p>在弹出的面板中输入以下代码，切换到root用户</p>
+<img src="https://ahzo.gitee.io/img/blog/b10315.png" style="zoom: 100%;" />
+
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum install git</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://ahzo.gitee.io/img/blog/b10303.png" style="zoom: 100%;" />
+
+<h4 id="配置Git-1"><a href="#配置Git-1" class="headerlink" title="配置Git"></a>配置Git</h4><p>创建git账户，并修改权限</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">adduser git</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> 740 /etc/sudoers</span></span><br></pre></td></tr></table></figure>
+
+<p>修改配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">vim /etc/sudoers</span></span><br></pre></td></tr></table></figure>
+
+<p>点击键盘“i”建进入编辑模式，然后通过方向键编辑<br>找到<code>root ALL=(ALL) ALL</code>在其下方以相同格式添加<code>git ALL=(ALL) ALL</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root    ALL=(ALL)       ALL</span><br><span class="line">git     ALL=(ALL)       ALL</span><br></pre></td></tr></table></figure>
+
+<img src="https://ahzo.gitee.io/img/blog/b10317.png" style="zoom: 100%;" />
+
+<p>点击<code>Esc</code>后输入<code>:wq</code>,保存退出</p>
+<p>改回权限</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> 400 /etc/sudoers</span></span><br></pre></td></tr></table></figure>
+
+<p>设置git密码</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">sudo passwd git</span></span><br></pre></td></tr></table></figure>
+
+<p>密码输入过程中不会显示，输完后直接回车即可，输入两次（密码需要包含大写加小写字母加数字）</p>
+<h4 id="配置SSH-1"><a href="#配置SSH-1" class="headerlink" title="配置SSH"></a>配置SSH</h4><p>切换为git用户，配置SSH</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">su git</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> ~/.ssh</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim ~/.ssh/authorized_keys</span></span><br></pre></td></tr></table></figure>
+
+<p>将本地生成的<code>id_rsa.pub</code>文件公钥复制进去（需要注意的是，如果之前配置过SSH，建议将同路径下的<code>known_hosts</code>文件删除，否则可能会报错，报错解决方法看后记），<br>点击<code>Esc</code>后输入<code>:wq</code>保存退出<br>赋予权限：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> 600 /home/git/.ssh/authorized_keys</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> 700 /home/git/.ssh</span></span><br></pre></td></tr></table></figure>
+
+<p>本地使用Git测试是否配置成功，桌面右键“Git Bash Here”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh -v git@服务器ip</span><br></pre></td></tr></table></figure>
+
+<p>服务器ip为你的服务器公网ip，详见图一中的（公）后面的一串ip地址，即为服务器的公网ip</p>
+<p>执行过程中出现选择，一律选择yes</p>
+<p>如果执行过程中不需要输入密码且无报错，即为配置成功.</p>
+<h4 id="Git仓库配置"><a href="#Git仓库配置" class="headerlink" title="Git仓库配置"></a>Git仓库配置</h4><p>使用root用户</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo su root</span></span><br></pre></td></tr></table></figure>
+
+<p>为hexo博客创建一个目录，赋予所有权限并设置所有者为git</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">mkdir</span> /home/hexo</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chown</span> -R git:git /home/hexo</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> -R 755 /home/hexo</span></span><br></pre></td></tr></table></figure>
+
+<p>创建git仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">mkdir</span> /home/repo</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cd</span> /home/repo</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">git init --bare hexo.git</span></span><br></pre></td></tr></table></figure>
+
+<p>创建Git钩子</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">vim /home/repo/hexo.git/hooks/post-receive</span></span><br></pre></td></tr></table></figure>
+
+<p>点击键盘“i”建进入编辑模式，然后通过方向键编辑，将以下代码复制进去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">git --work-tree=/home/hexo --git-dir=/home/repo/hexo.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>点击<code>Esc</code>后输入<code>:wq</code>保存退出<br>修改权限</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chown</span> -R git:git /home/repo/hexo.git/hooks/post-receive</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chmod</span> +x /home/repo/hexo.git/hooks/post-receive</span></span><br></pre></td></tr></table></figure>
+
+<p>修改git仓库的所有者为git：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chown</span> -R git:git /home/repo</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>安装过程中出现选择一律输入y（yes）</p>
+<img src="https://ahzo.gitee.io/img/blog/b10314.png" style="zoom: 100%;" />
+
+<p>安装完成后根据给出的地址（外网ip）及账号密码，登录宝塔</p>
+<img src="https://ahzo.gitee.io/img/blog/b10314.png" style="zoom: 100%;" />
+
+<p>如果忘记宝塔账号密码可以输入以下指令查看账号密码（需要在root用户下）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cd</span> /www/server/panel &amp;&amp; python tools.py panel testnamewd</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cd</span> /www/server/panel &amp;&amp; python tools.py panel testpasswd</span></span><br></pre></td></tr></table></figure>
+
+<p>或者直接进入宝塔目录，选择操作指令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cd</span> /www/server/panel</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">bt</span></span><br></pre></td></tr></table></figure>
+
+<p>进入宝塔面板后，按照提示安装Nginx</p>
+<img src="https://ahzo.gitee.io/img/blog/b10306.png" style="zoom: 100%;" />
+
+<h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>宝塔面板点击网站，选择添加站点，输入域名，根目录设为<code>/home/hexo</code>，php版本选择纯静态</p>
+<h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><p>修改Hexo配置文件中的推送地址：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">repo:</span> <span class="string">git@域名或IP:/home/repo/hexo.git</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://ahzo.gitee.io/img/blog/b10308.png" style="zoom: 100%;" />
+
+<p>如果Git配置失败，可以尝试使用root推送：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">repo:</span> <span class="string">root@域名或IP:/home/repo/hexo.git</span></span><br></pre></td></tr></table></figure>
+
+<p>然后，将本地仓库与远程仓库关联：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@服务器IP:/home/repo/hexo.git</span><br></pre></td></tr></table></figure>
+
+<p>最后三连（hexo clean &amp;&amp; hexo g &amp;&amp; hexo d）上传，输入域名访问即可</p>
+<h3 id="附加步骤"><a href="#附加步骤" class="headerlink" title="附加步骤"></a>附加步骤</h3><h4 id="添加404界面"><a href="#添加404界面" class="headerlink" title="添加404界面"></a>添加404界面</h4><p>修改nginx.conf的server项（或者直接在宝塔面板的目标站点操作）<br>添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#开启error_page</span><br><span class="line">error_page 500 502 503 504 404 /404.html;</span><br><span class="line"># 承接上面的location</span><br><span class="line">location = /404.html &#123;</span><br><span class="line">    # 放错误页面的目录路径。</span><br><span class="line">    root /home/hexo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://ahzo.gitee.io/img/blog/b10310.png" style="zoom: 100%;" />
+
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><h5 id="hexo-d-时known-hosts报错，提示冲突"><a href="#hexo-d-时known-hosts报错，提示冲突" class="headerlink" title="hexo d 时known_hosts报错，提示冲突"></a>hexo d 时known_hosts报错，提示冲突</h5><img src="https://ahzo.gitee.io/img/blog/b10311.png" style="zoom: 100%;" />
+
+<p>解决方法：根据报错给出的地址，找到known_hosts文件，因为我这里是第三行报错，所以就直接把known_hosts文件第三行删除即可</p>
+<h5 id="hexo-d-时报错："><a href="#hexo-d-时报错：" class="headerlink" title="***hexo -d ***时报错："></a>***hexo -d ***时报错：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> ! [remote rejected] HEAD -&gt; master (unpacker error)</span><br><span class="line">error: failed to push some refs to &#x27;xxx.xxx.xxx:/home/repo/hexo.git&#x27;</span><br><span class="line">FATAL &#123;</span><br></pre></td></tr></table></figure>
+
+<img src="https://ahzo.gitee.io/img/blog/b10318.png" style="zoom: 100%;" />
+
+<p>这种情况多半是目录所有者不是git；</p>
+<p>设置hexo仓库目录所有者为git：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chown</span> -R git:git /home/hexo</span></span><br></pre></td></tr></table></figure>
+
+<p>设置git仓库目录所有者为git：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">chown</span> -R git:git /home/repo</span></span><br></pre></td></tr></table></figure>
+
+<p>然后再上传；</p>
+<p>如果还是不行，建议使用root推送；</p>
+<p>在hexo配置文件中修改：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">repo:</span> <span class="string">root@域名或IP:/home/repo/hexo.git</span></span><br></pre></td></tr></table></figure>
+
+<p>如果root无法推送，同样大概率也是因为文件所有者问题，将hexo仓库和git仓库的所有者修改为root即可</p>
+<h5 id="如何判断文件夹所有者是否正确呢？"><a href="#如何判断文件夹所有者是否正确呢？" class="headerlink" title="如何判断文件夹所有者是否正确呢？"></a>如何判断文件夹所有者是否正确呢？</h5><p>回到<code>/home</code>目录，</p>
+<p>查看git仓库和hexo仓库的文件夹所有者：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cd</span> /home</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ll</span></span><br></pre></td></tr></table></figure>
+
+<p>正常情况可以看到git仓库和hexo仓库的文件夹所有者全为git</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">drwxr-xr-x 2 git        git        4096 Jan 28 22:14 hexo</span><br><span class="line">drwxr-xr-x 3 git        git        4096 Jan 28 22:15 repo</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/13/Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-儿子打疫苗" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -215,7 +536,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="打疫苗"><a href="#打疫苗" class="headerlink" title="打疫苗"></a>打疫苗</h2><h3 id="准备打针"><a href="#准备打针" class="headerlink" title="准备打针"></a>准备打针</h3><p>  距离上一次打疫苗刚过去半个月多月，这次打针和以前一样没有哭也没有闹（我儿子真勇！）。看着别人家的娃一个劲的哭，我内心很是傲娇。哈哈哈哈哈</p>
+        <h3 id="准备打针"><a href="#准备打针" class="headerlink" title="准备打针"></a>准备打针</h3><p>  距离上一次打疫苗刚过去半个月多月，这次打针和以前一样没有哭也没有闹（我儿子真勇！）。看着别人家的娃一个劲的哭，我内心很是傲娇。哈哈哈哈哈</p>
         
       
 
@@ -390,9 +711,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
         
       
 
@@ -525,11 +843,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
