@@ -12,31 +12,31 @@ const ap = new APlayer({
 		{
         name: '夜曲',
         artist: '周杰伦',
-        url: 'http://music.mjiao.net/夜曲.flac',
+        url: '/music/夜曲.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
     {
         name: '漂移',
         artist: '周杰伦',
-        url: 'http://music.mjiao.net/漂移.flac',
+        url: '/music/漂移.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
     {
         name: '珊瑚海',
         artist: '周杰伦',
-        url: 'http://music.mjiao.net/珊瑚海.flac',
+        url: '/music/珊瑚海.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
     {
         name: '枫',
         artist: '周杰伦',
-        url: 'http://music.mjiao.net/枫.flac',
+        url: '/music/枫.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
     {
         name: '黑色毛衣',
         artist: '周杰伦',
-        url: 'http://music.mjiao.net/黑色毛衣.flac',
+        url: '/music/黑色毛衣.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
 	
