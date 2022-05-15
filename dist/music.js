@@ -39,6 +39,5 @@ const ap = new APlayer({
         url: '/music/黑色毛衣.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
-	
 	]
 });
