@@ -15,6 +15,42 @@ const ap = new APlayer({
         url: '/music/夜曲.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
+    {
+        name: '一路向北',
+        artist: '周杰伦',
+        url: '/music/一路向北.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
+    {
+        name: '漂移',
+        artist: '周杰伦',
+        url: '/music/漂移.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
+    {
+        name: '珊瑚海',
+        artist: '周杰伦',
+        url: '/music/珊瑚海.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
+    {
+        name: '发如雪',
+        artist: '周杰伦',
+        url: '/music/发如雪.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
+    {
+        name: '枫',
+        artist: '周杰伦',
+        url: '/music/枫.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
+    {
+        name: '黑色毛衣',
+        artist: '周杰伦',
+        url: '/music/黑色毛衣.flac',
+        cover: '/music/十一月的肖邦.jpg',
+    },
 	
 	]
 });
