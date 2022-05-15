@@ -22,21 +22,9 @@ const ap = new APlayer({
         cover: '/music/十一月的肖邦.jpg',
     },
     {
-        name: '珊瑚海',
-        artist: '周杰伦',
-        url: '/music/珊瑚海.flac',
-        cover: '/music/十一月的肖邦.jpg',
-    },
-    {
         name: '枫',
         artist: '周杰伦',
         url: '/music/枫.flac',
-        cover: '/music/十一月的肖邦.jpg',
-    },
-    {
-        name: '黑色毛衣',
-        artist: '周杰伦',
-        url: '/music/黑色毛衣.flac',
         cover: '/music/十一月的肖邦.jpg',
     },
 	]
