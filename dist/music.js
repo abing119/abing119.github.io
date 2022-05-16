@@ -8,24 +8,28 @@ const ap = new APlayer({
     volume: 0.8,
     mutex: true,
     listFolded: true,
+    lrcType: 3,
     audio: [
 		{
         name: '夜曲',
         artist: '周杰伦',
         url: '/music/夜曲.flac',
         cover: '/music/十一月的肖邦.jpg',
+        lrc: '/music/夜曲.lrc',
     },
     {
         name: '漂移',
         artist: '周杰伦',
         url: '/music/漂移.flac',
         cover: '/music/十一月的肖邦.jpg',
+        lrc: '/music/漂移.lrc',
     },
     {
         name: '枫',
         artist: '周杰伦',
         url: '/music/枫.flac',
         cover: '/music/十一月的肖邦.jpg',
+        lrc: '/music/枫.lrc',
     },
 	]
 });
