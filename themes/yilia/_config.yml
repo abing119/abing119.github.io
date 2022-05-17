@@ -129,3 +129,8 @@ aboutme: 洞庭湖的老麻雀
 
 # 心知天气(如果不用为false):https://www.seniverse.com
 xinzhi_weather: true
+
+twikoo:
+  enable: true
+  visitor: false
+  envId: discuss-3guk3sgp9424ce2e
