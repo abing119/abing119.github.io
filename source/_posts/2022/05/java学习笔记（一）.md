@@ -159,7 +159,7 @@ public class test7_1{
        
         //字符串类型，引用类型
         String str = "锄禾日当午"
-        System.out.println( );
+        	System.out.println( );
     }
 }
 ```
@@ -180,7 +180,7 @@ public class AutoConvertDemo{
         //数值类型：由小转大自动转换
         int x = 1314;
         long g = x;
-        System.out.println( );
+        	System.out.println( );
     }
 }
 ```
@@ -196,7 +196,7 @@ public class ForceConvertDemo{
         //数值类型：由大转小
         short s = 99;
         byte b = (byte)s;
-    System.out.println( );
+   			System.out.println( );
 }
 ```
 
@@ -232,8 +232,8 @@ public class OperatorDemo{
         int x6 = 1;
         int X7 = x6++; //后自增
         int x8 = ++x6；//先自增
-        System.out.println("x7="+x7)
-        System.out.println("x8="+x8)
+        	System.out.println("x7="+x7)
+        	System.out.println("x8="+x8)
     }
 }
 ```
