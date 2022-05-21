@@ -5,8 +5,12 @@ tags:
 categories:
   - 学习
 keywords: java，学习笔记
-date: 2022-05-20 13:16:24
+date: 2022-05-20 13:16:24hu
 ---
+
+环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符
+
+<!--more-->
 
 ## 环境配置
 
@@ -15,8 +19,6 @@ date: 2022-05-20 13:16:24
 ([Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java8-windows))
 
 安装完JDK后，退出安装程序。
-
-<!--more-->
 
 ![](https://blog.mjiao.net/jdk安装.jpg)
 
@@ -256,4 +258,99 @@ public class OperatorDemo{
     }
 }
 ```
+
+## 算术与赋值运算符练习
+
+从控制台接收输入的工具：
+
+```java
+import java.util.Scanner;
+Scanner input = Scanner(System.in);
+int num = input.nextInt();
+```
+
+1. 输入一个五位整数（54321），求各个位上的数的和:
+
+```java
+import java.util.Scanner;
+public class test1{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in)；
+            System.out.println("请输入一个5位数值")；
+            int num = input.nextInt(); //接收控制器输入
+        	int w = num/10000;
+            int q = num/1000%10; //除以1000再除10取余
+        	int b = num/100%10;
+        	int s = num/10%10;
+        	int g = num%10;
+        	int result = w+q+b+s+g；
+                System.out.println()；
+    }
+}
+```
+
+2. 输入一个天数，计算周数和剩余天数：
+
+```java
+import java.util.Scanner;
+public class test2{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入一个天数：")
+        int day = input.nextInt();
+        int week = day/7;
+        System.out.println("周数是"+week);
+        int dayd = day%7; //周数多出来的天数取余
+        System.out.println("剩余的天数："+dayd);
+    }
+}
+```
+
+## 逻辑运算符
+
+非0即真，0为假，逻辑或：或1则1，逻辑与：全1则1。
+
+| 运算符 |  描述  |      示例       | 结果  |
+| :----: | :----: | :-------------: | :---: |
+|   &    |   与   |  false & true   | false |
+|   \|   |   或   |  false \| true  | true  |
+|   ^    |  异或  |  true ^ false   | true  |
+|   !    |   非   |     ! true      | false |
+|   &&   | 短路与 |  false && true  | false |
+|  \|\|  | 短路或 | false \|\| true | true  |
+
+> 面试题：&和&&的区别？
+>
+> ​	&是左右两边都计算后对比，&&是计算左边后以得出的值来决定直接返回值，还是计算右边后再返回值。效率上&&比&更快。
+
+## 三目运算符
+
+X ? Y : Z
+
+```java
+import java.util.Scanner;
+public class test1{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入成绩： ")；
+            int s = input.nextInt();
+        String s = s>=60?"及格":"不及格"；
+            Syetem.out.println(s);
+    }
+}
+```
+
+## 位运算符
+
+![](https://blog.mjiao.net/位运算符.jpg)
+
+## 位移运算符
+
+左移：`a<<b;`将二进制形式的a逐位左移b位，最低位空出的b位补0
+
+带符号右移：`a>>b;`将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位
+
+无符号右移：`a>>>b;`将二进制形式的a逐位右移b位，最高位空出的b位补0
+
+![](https://blog.mjiao.net/位移运算符.jpg)
 
