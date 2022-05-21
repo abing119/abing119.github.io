@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yi.mjiao.net">
   <title>java学习笔记（一） | 面朝大海，春暖花开</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="环境配置下载JDK(Java Downloads | Oracle) 安装完JDK后，退出安装程序。">
+  <meta name="description" content="环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java学习笔记（一）">
 <meta property="og:url" content="http://yi.mjiao.net/2022/05/20/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="面朝大海，春暖花开">
-<meta property="og:description" content="环境配置下载JDK(Java Downloads | Oracle) 安装完JDK后，退出安装程序。">
+<meta property="og:description" content="环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.mjiao.net/jdk%E5%AE%89%E8%A3%85.jpg">
 <meta property="og:image" content="https://blog.mjiao.net/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1.jpg">
@@ -22,8 +22,10 @@
 <meta property="og:image" content="https://blog.mjiao.net/%E5%8F%98%E9%87%8F%E7%9A%84%E6%A6%82%E5%BF%B5.jpg">
 <meta property="og:image" content="https://blog.mjiao.net/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.jpg">
 <meta property="og:image" content="https://blog.mjiao.net/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6.jpg">
-<meta property="article:published_time" content="2022-05-20T05:16:24.000Z">
-<meta property="article:modified_time" content="2022-05-21T12:58:10.412Z">
+<meta property="og:image" content="https://blog.mjiao.net/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.jpg">
+<meta property="og:image" content="https://blog.mjiao.net/%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6.jpg">
+<meta property="article:published_time" content="2022-05-20T05:16:24.885Z">
+<meta property="article:modified_time" content="2022-05-21T23:51:00.878Z">
 <meta property="article:author" content="易大大">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -216,17 +218,17 @@
         
         
         <a href="/2022/05/20/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2022-05-20T05:16:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-20</time>
+  	<time datetime="2022-05-20T05:16:24.885Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h4 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h4><p>(<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java8-windows">Java Downloads | Oracle</a>)</p>
-<p>安装完JDK后，退出安装程序。</p>
-<span id="more"></span>
+        <h5 id="环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符"><a href="#环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符" class="headerlink" title="环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符"></a>环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符</h5><span id="more"></span>
 
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h4 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h4><p>(<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java8-windows">Java Downloads | Oracle</a>)</p>
+<p>安装完JDK后，退出安装程序。</p>
 <p><img src="https://blog.mjiao.net/jdk%E5%AE%89%E8%A3%85.jpg"></p>
 <h4 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h4><p>用户环境变量配置</p>
 <p><img src="https://blog.mjiao.net/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE1.jpg"></p>
@@ -304,6 +306,78 @@
 <h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>将一个值赋给一个变量，运算顺序从右到左</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OperatorDemo</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="comment">//赋值运算符</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">x9</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        x9+=<span class="number">1</span>; <span class="comment">//x9 = x9+1</span></span><br><span class="line">        </span><br><span class="line">         <span class="comment">//面试题</span></span><br><span class="line">        <span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">1</span></span><br><span class="line">        <span class="comment">//s = s+1; 报错！没有类型强制转换</span></span><br><span class="line">        s+=<span class="number">1</span>; <span class="comment">//s=(short)(s+1) S+=默认自带类型转换 </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="算术与赋值运算符练习"><a href="#算术与赋值运算符练习" class="headerlink" title="算术与赋值运算符练习"></a>算术与赋值运算符练习</h2><p>从控制台接收输入的工具：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> Scanner(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> input.nextInt();</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>输入一个五位整数（54321），求各个位上的数的和:</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test1</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in)；</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入一个5位数值&quot;</span>)；</span><br><span class="line">            <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> input.nextInt(); <span class="comment">//接收控制器输入</span></span><br><span class="line">        	<span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> num/<span class="number">10000</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">q</span> <span class="operator">=</span> num/<span class="number">1000</span>%<span class="number">10</span>; <span class="comment">//除以1000再除10取余</span></span><br><span class="line">        	<span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> num/<span class="number">100</span>%<span class="number">10</span>;</span><br><span class="line">        	<span class="type">int</span> <span class="variable">s</span> <span class="operator">=</span> num/<span class="number">10</span>%<span class="number">10</span>;</span><br><span class="line">        	<span class="type">int</span> <span class="variable">g</span> <span class="operator">=</span> num%<span class="number">10</span>;</span><br><span class="line">        	<span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> w+q+b+s+g；</span><br><span class="line">                System.out.println()；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>输入一个天数，计算周数和剩余天数：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test2</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一个天数：&quot;</span>)</span><br><span class="line">        <span class="type">int</span> <span class="variable">day</span> <span class="operator">=</span> input.nextInt();</span><br><span class="line">        <span class="type">int</span> <span class="variable">week</span> <span class="operator">=</span> day/<span class="number">7</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;周数是&quot;</span>+week);</span><br><span class="line">        <span class="type">int</span> <span class="variable">dayd</span> <span class="operator">=</span> day%<span class="number">7</span>; <span class="comment">//周数多出来的天数取余</span></span><br><span class="line">        System.out.println(<span class="string">&quot;剩余的天数：&quot;</span>+dayd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>非0即真，0为假，逻辑或：或1则1，逻辑与：全1则1。</p>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+<th align="center">示例</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+<td align="center">false &amp; true</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">或</td>
+<td align="center">false | true</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">异或</td>
+<td align="center">true ^ false</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">!</td>
+<td align="center">非</td>
+<td align="center">! true</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">&amp;&amp;</td>
+<td align="center">短路与</td>
+<td align="center">false &amp;&amp; true</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">||</td>
+<td align="center">短路或</td>
+<td align="center">false || true</td>
+<td align="center">true</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>面试题：&amp;和&amp;&amp;的区别？</p>
+<p>​	&amp;是左右两边都计算后对比，&amp;&amp;是计算左边后以得出的值来决定直接返回值，还是计算右边后再返回值。效率上&amp;&amp;比&amp;更快。</p>
+</blockquote>
+<h2 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h2><p>X ? Y : Z</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test1</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入成绩： &quot;</span>)；</span><br><span class="line">            <span class="type">int</span> <span class="variable">s</span> <span class="operator">=</span> input.nextInt();</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> s&gt;=<span class="number">60</span>?<span class="string">&quot;及格&quot;</span>:<span class="string">&quot;不及格&quot;</span>；</span><br><span class="line">            Syetem.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p><img src="https://blog.mjiao.net/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.jpg"></p>
+<h2 id="位移运算符"><a href="#位移运算符" class="headerlink" title="位移运算符"></a>位移运算符</h2><p>左移：<code>a&lt;&lt;b;</code>将二进制形式的a逐位左移b位，最低位空出的b位补0</p>
+<p>带符号右移：<code>a&gt;&gt;b;</code>将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位</p>
+<p>无符号右移：<code>a&gt;&gt;&gt;b;</code>将二进制形式的a逐位右移b位，最高位空出的b位补0</p>
+<p><img src="https://blog.mjiao.net/%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6.jpg"></p>
 
       
 
@@ -385,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDJDK"><span class="toc-number">1.0.1.</span> <span class="toc-text">下载JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.</span> <span class="toc-text">环境变量配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E9%85%8D%E7%BD%AE%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">1.0.3.</span> <span class="toc-text">检查配置是否成功</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HelloWorld%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">HelloWorld程序分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E5%88%86%E6%9E%90"><span class="toc-number">2.0.1.</span> <span class="toc-text">语句分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API%E6%96%87%E6%A1%A3"><span class="toc-number">2.0.2.</span> <span class="toc-text">API文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JAVA%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%88%9D%E6%8E%A2"><span class="toc-number">2.0.3.</span> <span class="toc-text">JAVA运行环境初探</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E6%A6%82%E8%BF%B0"><span class="toc-number">3.</span> <span class="toc-text">类的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text">Package(包)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">5.</span> <span class="toc-text">标识符命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">6.</span> <span class="toc-text">变量的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">7.1.</span> <span class="toc-text">基本数据类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number">8.</span> <span class="toc-text">进制转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">9.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.</span> <span class="toc-text">赋值运算符</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90-%E7%B1%BB%E7%9A%84%E6%A6%82%E8%BF%B0-%E5%8C%85-%E6%A0%87%E8%AF%86%E7%AC%A6-%E5%8F%98%E9%87%8F-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.</span> <span class="toc-text">环境配置-基础代码分析-类的概述-包-标识符-变量-数据类型-数据转换-运算符</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDJDK"><span class="toc-number"></span> <span class="toc-text">下载JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">环境变量配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E9%85%8D%E7%BD%AE%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number"></span> <span class="toc-text">检查配置是否成功</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HelloWorld%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90"><span class="toc-number"></span> <span class="toc-text">HelloWorld程序分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E5%88%86%E6%9E%90"><span class="toc-number"></span> <span class="toc-text">语句分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#API%E6%96%87%E6%A1%A3"><span class="toc-number"></span> <span class="toc-text">API文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JAVA%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%88%9D%E6%8E%A2"><span class="toc-number"></span> <span class="toc-text">JAVA运行环境初探</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E6%A6%82%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">类的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-%E5%8C%85"><span class="toc-number"></span> <span class="toc-text">Package(包)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number"></span> <span class="toc-text">标识符命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number"></span> <span class="toc-text">变量的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number"></span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number"></span> <span class="toc-text">基本数据类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-number"></span> <span class="toc-text">进制转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E4%B8%8E%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BB%83%E4%B9%A0"><span class="toc-number"></span> <span class="toc-text">算术与赋值运算符练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">三目运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number"></span> <span class="toc-text">位移运算符</span></a>
                     </div>
                 </span>
             </div>
@@ -505,15 +579,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>
