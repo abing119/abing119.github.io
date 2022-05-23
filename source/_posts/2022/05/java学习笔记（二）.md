@@ -8,7 +8,7 @@ keywords: java，学习笔记
 date: 2022-05-22 19:31:52
 ---
 
-If else选择结构
+If else选择结构-switch结构
 
 <!--more-->
 
@@ -152,3 +152,62 @@ public class YearDemo {
 }
 ```
 
+
+
+## switch分支结构
+
+#### switch语法：
+
+```word
+switch(变量 | 表达式){
+	case 值1：
+		逻辑代码1;
+	case 值2：
+		逻辑代码2;
+	case 值n：
+		逻辑代码n;
+	default:
+		为满足时的逻辑代码；
+}
+```
+
+> 注意：
+>
+> 当匹配的`case`执行后，不会自动退出整个结构，而是继续向下执行。`break`关键字可在匹配的`case`执行后，跳出整个结构。适用于等值判断。
+
+例：
+
+```JAVA
+import java.util.Scanner;
+
+public class SwitchDemo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入套餐号码：");
+        int num = input.nextInt();
+        switch (num){
+            case 1:
+                System.out.println("香辣鸡腿堡");
+                break; //跳出switch语句
+            case 2:
+                System.out.println("新奥尔良鸡腿堡");
+                break;
+            case 3:
+                System.out.println("老北京鸡肉卷");
+                break;
+            default:
+                System.out.println("没有对应的套餐");
+                break;
+        }
+    }
+}
+
+```
+
+
+
+> 适用场景：
+>
+> if: 变量的值在某个区间之内
+>
+> switch： 变量的值是某个定值
