@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yi.mjiao.net">
   <title>java学习笔记（二） | 面朝大海，春暖花开</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="If else选择结构">
+  <meta name="description" content="If else选择结构-switch结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java学习笔记（二）">
 <meta property="og:url" content="http://yi.mjiao.net/2022/05/22/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="面朝大海，春暖花开">
-<meta property="og:description" content="If else选择结构">
+<meta property="og:description" content="If else选择结构-switch结构">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-22T11:31:52.000Z">
-<meta property="article:modified_time" content="2022-05-22T13:03:28.346Z">
+<meta property="article:modified_time" content="2022-05-23T06:23:18.389Z">
 <meta property="article:author" content="易大大">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>If else选择结构</p>
+        <p>If else选择结构-switch结构</p>
 <span id="more"></span>
 
 <h2 id="If-else选择结构"><a href="#If-else选择结构" class="headerlink" title="If else选择结构"></a>If else选择结构</h2><h4 id="if-语法："><a href="#if-语法：" class="headerlink" title="if 语法："></a>if 语法：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if(布尔表达式)&#123;</span><br><span class="line">	//代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -262,6 +262,24 @@
 <p>判断某一年是否为闰年（被4整除但不能被100整除能被400整除）是闰年否则是平年</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">YearDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一个年份：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> input.nextInt();</span><br><span class="line">        <span class="keyword">if</span> (year%<span class="number">4</span>==<span class="number">0</span> &amp;&amp; year%<span class="number">100</span>!=<span class="number">0</span> || year%<span class="number">400</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;闰年&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;平年&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="switch分支结构"><a href="#switch分支结构" class="headerlink" title="switch分支结构"></a>switch分支结构</h2><h4 id="switch语法："><a href="#switch语法：" class="headerlink" title="switch语法："></a>switch语法：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">switch(变量 | 表达式)&#123;</span><br><span class="line">	case 值1：</span><br><span class="line">		逻辑代码1;</span><br><span class="line">	case 值2：</span><br><span class="line">		逻辑代码2;</span><br><span class="line">	case 值n：</span><br><span class="line">		逻辑代码n;</span><br><span class="line">	default:</span><br><span class="line">		为满足时的逻辑代码；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：</p>
+<p>当匹配的<code>case</code>执行后，不会自动退出整个结构，而是继续向下执行。<code>break</code>关键字可在匹配的<code>case</code>执行后，跳出整个结构。适用于等值判断。</p>
+</blockquote>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SwitchDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">input</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入套餐号码：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> input.nextInt();</span><br><span class="line">        <span class="keyword">switch</span> (num)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;香辣鸡腿堡&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>; <span class="comment">//跳出switch语句</span></span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;新奥尔良鸡腿堡&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;老北京鸡肉卷&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;没有对应的套餐&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>适用场景：</p>
+<p>if: 变量的值在某个区间之内</p>
+<p>switch： 变量的值是某个定值</p>
+</blockquote>
 
       
 
@@ -334,7 +352,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#If-else%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">If else选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">if 语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if-else-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.2.</span> <span class="toc-text">if else 语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%87%8Dif%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.3.</span> <span class="toc-text">多重if选择结构 语法：</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#If-else%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">If else选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">if 语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#if-else-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.2.</span> <span class="toc-text">if else 语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%87%8Dif%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.0.3.</span> <span class="toc-text">多重if选择结构 语法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">switch分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#switch%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">2.0.1.</span> <span class="toc-text">switch语法：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -462,11 +480,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
             
             <div class="clearfix"></div>
