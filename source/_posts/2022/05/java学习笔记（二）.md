@@ -8,7 +8,7 @@ keywords: java，学习笔记
 date: 2022-05-22 19:31:52
 ---
 
-If else选择结构-switch结构
+If else选择结构-switch结构-嵌套if选择结构
 
 <!--more-->
 
@@ -104,9 +104,8 @@ if(布尔表达式){
 
 以上均为false，则执行代码块4，再退出整个结构
 
-> 注意：
+> 注意：相互排斥，有一个为true，其他均不在执行，适用区间判断，但要保证条件顺序（从大到小、从小到大）
 >
-> 相互排斥，有一个为true，其他均不在执行，适用区间判断，但要保证条件顺序（从大到小、从小到大）
 
 ```java
 import java.util.Scanner;
@@ -171,9 +170,8 @@ switch(变量 | 表达式){
 }
 ```
 
-> 注意：
+> 注意：当匹配的`case`执行后，不会自动退出整个结构，而是继续向下执行。`break`关键字可在匹配的`case`执行后，跳出整个结构。适用于等值判断。
 >
-> 当匹配的`case`执行后，不会自动退出整个结构，而是继续向下执行。`break`关键字可在匹配的`case`执行后，跳出整个结构。适用于等值判断。
 
 例：
 
@@ -211,3 +209,112 @@ public class SwitchDemo {
 > if: 变量的值在某个区间之内
 >
 > switch： 变量的值是某个定值
+
+
+
+## 嵌套if选择结构
+
+嵌套if语法：
+
+```word
+if(外层表达式){
+	if(内层表达式){
+		//内层代码块1
+	}else{
+		//内层代码块2
+	}
+}else{
+	//外层代码块
+}
+```
+
+ 执行流程：
+
+当外层条件满足时，在判断内层条件
+
+> 注意：一个选择结构中，可嵌套另一个选择结构，嵌套格式正确的情况下，支持任意组合
+
+switch与if嵌套语法：
+
+```word
+switch(表达式){
+case 取值n: 语句块n；
+	if(表达式){……}
+	break;
+default: 语句块n+1;
+	break;
+}
+```
+
+> 注意：嵌套越多逻辑越复杂，应该思考更简单的逻辑判断去实现，利于理解也利于性能提高
+
+作业：
+
+1. 多条件嵌套分支，设计一个程序，根据天气情况选择外出或在家，外出逛街还是去公园，在家是看电影还是玩游戏
+
+```java
+import java.util.Scanner;
+
+public class Text13_1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("今天什么天气（1好，2有雨）");
+        int weather = input.nextInt();
+        if (weather == 1){
+            System.out.println("今天天气太好了，我们是去逛街（1）还是去逛公园（2）");
+            int where = input.nextInt();
+            if (where == 1){
+                System.out.println("去逛街");
+            } else if (where == 2) {
+                System.out.println("去公园");
+            }
+        } else if (weather == 2) {
+            System.out.println("下雨了，在家是看电影呢还是玩游戏(1看电影，2玩游戏)");
+            int rain = input.nextInt();
+            if (rain == 1){
+                System.out.println("看电影");
+            } else if (rain == 2) {
+                System.out.println("玩游戏");
+            }
+        }
+    }
+}
+
+```
+
+2. 设计一个买早餐的逻辑过程，选择吃煎饼果子还是吃烤冷面，吃煎饼果子是否要加香菜？吃烤冷面是要酸辣味还是甜口味
+
+```java
+import java.util.Scanner;
+
+public class Text13_2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("吃早餐:1(煎饼果子）2(烤冷面)");
+        int num = input.nextInt();
+        int one = 1;
+        switch (num){
+            case 1:
+                System.out.println("煎饼果子加不加香菜：1-加 非1-不加");
+                one = input.nextInt();
+                if (one == 1){
+                    System.out.println("煎饼果子香菜做好了");
+                }else {
+                    System.out.println("煎饼果子不加香菜做好了");
+                }
+                break;
+            case 2:
+                System.out.println("烤冷面：1-酸辣 非1-甜口");
+                one = input.nextInt();
+                if (one == 1){
+                    System.out.println("酸辣烤冷面做好了");
+                }else {
+                    System.out.println("甜口味烤冷面做好了");
+                }
+                break;
+        }
+    }
+}
+
+```
+
