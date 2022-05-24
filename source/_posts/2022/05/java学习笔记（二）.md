@@ -65,15 +65,15 @@ if(布尔表达式){
 结果为false，则先执行代码块2，再退出整个结构，执行后续代码
 
 ```java
-public class ifdemo{
+public class IfDemo{
     public static void main(String[] args){
         int s = 100;
         if (s==99){
             System.out.println("满分");
         }else{
-            System.out.println("只差一点点")；
+            System.out.println("只差一点点");
         }
-        System.out.println("好可惜")；
+        System.out.println("好可惜");
     }
 }
 ```
