@@ -33,13 +33,13 @@ if(布尔表达式){
 例：
 
 ```java
-public class ifdemo{
+public class IfDemo{
     public static void main(String[] args){
         int s = 100;
         if (s==100){
             System.out.println("满分");
         }
-        System.out.println("好可惜")；
+        System.out.println("好可惜");
     }
 }
 ```
