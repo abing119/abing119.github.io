@@ -8,8 +8,6 @@ keywords: Mac
 date: 2022-06-09 23:11:30
 ---
 
-## mac配置jdk环境
-
 1. 下载jdk
 
 2. 打开Finder,可以在下图所示的路径中找到安装好的jdk，其中Contents下的Home文件夹，是该JDK的根目录。
